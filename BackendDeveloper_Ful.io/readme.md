@@ -1,5 +1,4 @@
 # Full.io-Backend-Developer-Internship
-# Full.io-Backend-Developer-Internship
 # README: Technical Questions and Solutions
 
 This README provides explanations and solutions for the technical questions given as part of an assessment. The solutions are written in Python and aim to fulfill the specified requirements for each question.
