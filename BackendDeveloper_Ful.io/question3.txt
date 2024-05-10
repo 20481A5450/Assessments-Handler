@@ -1,0 +1,11 @@
+A. What is reverse-i-search in a Linux terminal?
+   Reverse-i-search in a Linux terminal is a keyboard shortcut (Ctrl + R) that allows users to search for previously entered commands by typing a keyword and finding the most recent command that matches.
+
+B. How do you list out the hidden directories using Linux command line tool?
+   To list hidden directories using a Linux command line tool, use the command: `ls -d .*`
+
+C. How comfortable are you with using Linux-based OS like Ubuntu, Centos, etc?
+   I am familiar with using Linux-based operating systems like Ubuntu, CentOS, etc., for various tasks including command-line navigation, software installation, and basic system administration.
+
+D. Have you ever used Servers to host any web applications in the past? If yes, what services did you set up (Like- Apache/Nginx/FTP/SMTP, etc)?
+   Yes, I have experience hosting web applications on servers. I've set up services like Apache or Nginx for web serving, as well as databases, and occasionally other services like FTP or SMTP for file transfer or email functionality.
