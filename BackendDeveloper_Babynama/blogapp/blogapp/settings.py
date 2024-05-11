@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'blogapp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': os.environ.get('DB_DRIVER', 'django.db.backends.postgresql'),
-        'NAME': os.environ.get('PG_DB', 'postgres'),
+        'NAME': os.environ.get('PG_DB', 'blogdb'),
         'USER': os.environ.get('PG_USER', 'postgres'),
         'PASSWORD': os.environ.get('PG_PASSWORD', 'root'),#make sure about the password
         'HOST': os.environ.get('PG_HOST', 'localhost'),
