@@ -9,10 +9,9 @@ def extract_questions(text):
     solution_text = None
 
     lines = text.split('\n')
-    print(lines)
 
     for line_index, line in enumerate(lines):
-        if line.startswith('Question ID:') or line.startswith('\section*{Question ID:'):
+        if line.startswith('Question ID:') or line.startswith('\\section*{Question ID:'):
             # If we're already processing a question, save it before starting a new one
             if question_id:
                 question = format_question(question_id, question_text, options, correct_option, solution_text, questions)
@@ -27,25 +26,24 @@ def extract_questions(text):
 
             question_id = line.split(': ')[1].strip('{}')  # Ensure no curly braces in question_id
 
-
-        elif line.startswith('(A)'):
-            correct_option = line[1]
-            options.append({
-                "optionNumber": line[1],
-                "optionText": line[4:].strip(),
-                "isCorrect": True
-            })
-        elif line.startswith('(B)') or line.startswith('(C)') or line.startswith('(D)'):
-            options.append({
-                "optionNumber": line[1],
-                "optionText": line[4:].strip(),
-                "isCorrect": False
-            })
         elif line.startswith('\\section*{Answer'):
-            if line_index + 1 < len(lines):
-                next_line = lines[line_index + 1]
-                if next_line.startswith('Sol.'):
-                    solution_text = next_line.split('. ')[1].strip()
+            correct_option = line.split('Answer ')[1].strip()[1:-1]
+
+        elif question_id and question_text is None and lines[line_index - 1] == '':
+            question_text = line
+
+        elif line.startswith('Sol.') and solution_text is None:
+            solution_text = line.split('Sol. ')[1].strip()
+
+        elif line.startswith('(A)') or line.startswith('(B)') or line.startswith('(C)') or line.startswith('(D)'):    
+            option_number = line[1]
+            option_text = line[4:].strip()
+            is_correct = option_number == correct_option or correct_option in ['A', 'B', 'C', 'D'] and option_number == correct_option
+            options.append({
+                "optionNumber": option_number,
+                "optionText": option_text,
+                "isCorrect": is_correct
+            })
 
     # Add the last question
     if question_id:
