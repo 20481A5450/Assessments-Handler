@@ -26,8 +26,6 @@ def extract_questions(text):
 
             question_id = line.split(': ')[1].strip('{}')  # Ensure no curly braces in question_id
 
-        elif line.startswith('\\section*{Answer'):
-            correct_option = line.split('Answer ')[1].strip()[1:-1]
 
         elif question_id and question_text is None and lines[line_index - 1] == '':
             question_text = line
@@ -44,6 +42,9 @@ def extract_questions(text):
                 "optionText": option_text,
                 "isCorrect": is_correct
             })
+
+        elif line.startswith('\\section*{Answer'):
+            correct_option = line.split('Answer ')[1].strip()[1:-1]
 
     # Add the last question
     if question_id:
