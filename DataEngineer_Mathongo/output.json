@@ -25,6 +25,7 @@
         "isCorrect": false
       }
     ],
+    "correctOption": "D",
     "solutionText": "$\\Delta=a_{11} A_{11}+a_{21} A_{21}+a_{31} A_{31}$"
   },
   {
@@ -50,9 +51,10 @@
       {
         "optionNumber": "D",
         "optionText": "2",
-        "isCorrect": false
+        "isCorrect": true
       }
     ],
+    "correctOption": "B",
     "solutionText": "$y=0$ and $3 x=6$"
   },
   {
@@ -68,7 +70,7 @@
       {
         "optionNumber": "B",
         "optionText": "4",
-        "isCorrect": false
+        "isCorrect": true
       },
       {
         "optionNumber": "C",
@@ -81,6 +83,7 @@
         "isCorrect": false
       }
     ],
+    "correctOption": "C",
     "solutionText": "$\\left|\\begin{array}{cc}3 & -4 \\\\ 2 & 1\\end{array}\\right|=\\left|\\begin{array}{cc}2 x & 5 \\\\ 1 & x\\end{array}\\right|$"
   },
   {
@@ -101,7 +104,7 @@
       {
         "optionNumber": "C",
         "optionText": "C and D only",
-        "isCorrect": false
+        "isCorrect": true
       },
       {
         "optionNumber": "D",
@@ -109,6 +112,7 @@
         "isCorrect": false
       }
     ],
+    "correctOption": "B",
     "solutionText": "Statement $A$ is incorrect as for singular matrices $|A|=0$"
   },
   {
@@ -124,7 +128,7 @@
       {
         "optionNumber": "B",
         "optionText": "$(-1, \\infty)$",
-        "isCorrect": false
+        "isCorrect": true
       },
       {
         "optionNumber": "C",
@@ -137,6 +141,7 @@
         "isCorrect": false
       }
     ],
+    "correctOption": "C",
     "solutionText": "$\\frac{d y}{d x}=x^{2} \\cdot 2 e^{2 x}+2 x \\cdot e^{2 x}=2 x e^{2 x}(x+1)$"
   },
   {
@@ -157,7 +162,7 @@
       {
         "optionNumber": "C",
         "optionText": "$\\frac{2}{9}$",
-        "isCorrect": false
+        "isCorrect": true
       },
       {
         "optionNumber": "D",
@@ -165,6 +170,7 @@
         "isCorrect": false
       }
     ],
+    "correctOption": "B",
     "solutionText": null
   }
 ]

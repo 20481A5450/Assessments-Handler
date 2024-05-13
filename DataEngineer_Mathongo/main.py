@@ -42,10 +42,15 @@ def extract_questions(text):
         elif line.startswith('(A)') or line.startswith('(B)') or line.startswith('(C)') or line.startswith('(D)'):
             option_number = line[1]
             option_text = line[4:].strip()
-            print(correct_option)
+            # print(correct_option)
             # is_correct = option_number in correct_option
-            is_correct = option_number == correct_option
-            print (option_number, correct_option, is_correct) 
+            # print(option_number)
+            if option_number == correct_option:
+                is_correct = True
+            else:
+                is_correct = False
+            print(is_correct)
+            # print (option_number, correct_option, is_correct) 
             options.append({
                 "optionNumber": option_number,
                 "optionText": option_text,
