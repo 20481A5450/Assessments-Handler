@@ -1,11 +1,12 @@
 import json
+import re
 
 def extract_questions(text):
     questions = []
     question_id = None
     question_text = None
     options = []
-    correct_option = None
+    correct_option = None  # Moved outside the loop
     solution_text = None
 
     lines = text.split('\n')
@@ -21,11 +22,9 @@ def extract_questions(text):
                 question_id = None
                 question_text = None
                 options = []
-                correct_option = None
                 solution_text = None
 
             question_id = line.split(': ')[1].strip('{}')  # Ensure no curly braces in question_id
-
 
         elif question_id and question_text is None and lines[line_index - 1] == '':
             question_text = line
@@ -33,18 +32,25 @@ def extract_questions(text):
         elif line.startswith('Sol.') and solution_text is None:
             solution_text = line.split('Sol. ')[1].strip()
 
-        elif line.startswith('(A)') or line.startswith('(B)') or line.startswith('(C)') or line.startswith('(D)'):    
+        elif  line.startswith('\\section*{Answer') or line.startswith('Answer'):
+            # Extract only the alphabet part from the answer section
+            # correct_option = line.split('Answer')[1].strip()[1:].strip()[0]
+            # print(correct_option)
+            correct_option = re.search(r'\((.*?)\)', line).group(1)
+            print("Correct option:", correct_option)
+
+        elif line.startswith('(A)') or line.startswith('(B)') or line.startswith('(C)') or line.startswith('(D)'):
             option_number = line[1]
             option_text = line[4:].strip()
-            is_correct = option_number == correct_option or correct_option in ['A', 'B', 'C', 'D'] and option_number == correct_option
+            print(correct_option)
+            # is_correct = option_number in correct_option
+            is_correct = option_number == correct_option
+            print (option_number, correct_option, is_correct) 
             options.append({
                 "optionNumber": option_number,
                 "optionText": option_text,
                 "isCorrect": is_correct
             })
-
-        elif line.startswith('\\section*{Answer'):
-            correct_option = line.split('Answer ')[1].strip()[1:-1]
 
     # Add the last question
     if question_id:
@@ -53,14 +59,17 @@ def extract_questions(text):
 
     return questions
 
+
 def format_question(question_id, question_text, options, correct_option, solution_text, questions):
     return {
         "questionNumber": len(questions) + 1,
         "questionId": question_id,
         "questionText": question_text,
         "options": options,
+        "correctOption": correct_option,
         "solutionText": solution_text
     }
+
 
 # Read input text from file
 with open('Task.txt', 'r') as file:
