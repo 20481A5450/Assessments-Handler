@@ -2,7 +2,7 @@
   {
     "questionNumber": 1,
     "questionId": "481221",
-    "questionText": "If $\\Delta=\\left|\\begin{array}{lll}a_{11} & a_{12} & a_{13} \\\\ a_{21} & a_{22} & a_{23} \\\\ a_{31} & a_{32} & a_{33}\\end{array}\\right|$ and $A_{i j}$ is co-factor of $a_{i j}$, then",
+    "questionText": "If $\\Delta=\\left|\\begin{array}{lll}a_{11} & a_{12} & a_{13} \\\\ a_{21} & a_{22} & a_{23} \\\\ a_{31} & a_{32} & a_{33}\\end{array}\\right|$ and $A_{i j}$ is co-factor of $a_{i j}$, then value of $\\Delta$ is equal to",
     "options": [
       {
         "optionNumber": "A",
@@ -22,7 +22,7 @@
       {
         "optionNumber": "D",
         "optionText": "$a_{11} A_{11}+a_{21} A_{21}+a_{31} A_{31}$",
-        "isCorrect": false
+        "isCorrect": true
       }
     ],
     "correctOption": "D",
@@ -31,7 +31,7 @@
   {
     "questionNumber": 2,
     "questionId": "481222",
-    "questionText": "If the matrix $\\left[\\begin{array}{ccc}0 & -1 & 3 x \\\\ 1 & y & -5 \\\\ -6 & 5 & 0\\end{array}\\right]$ is skew symmetric, then",
+    "questionText": "If the matrix $\\left[\\begin{array}{ccc}0 & -1 & 3 x \\\\ 1 & y & -5 \\\\ -6 & 5 & 0\\end{array}\\right]$ is skew symmetric, then $6 x+y$ is equal to",
     "options": [
       {
         "optionNumber": "A",
@@ -41,7 +41,7 @@
       {
         "optionNumber": "B",
         "optionText": "12",
-        "isCorrect": false
+        "isCorrect": true
       },
       {
         "optionNumber": "C",
@@ -51,11 +51,11 @@
       {
         "optionNumber": "D",
         "optionText": "2",
-        "isCorrect": true
+        "isCorrect": false
       }
     ],
     "correctOption": "B",
-    "solutionText": "$y=0$ and $3 x=6$"
+    "solutionText": "$y=0$ and $3 x=6$ So, $6 x+y=12$"
   },
   {
     "questionNumber": 3,
@@ -70,12 +70,12 @@
       {
         "optionNumber": "B",
         "optionText": "4",
-        "isCorrect": true
+        "isCorrect": false
       },
       {
         "optionNumber": "C",
         "optionText": "$2 \\sqrt{2}$",
-        "isCorrect": false
+        "isCorrect": true
       },
       {
         "optionNumber": "D",
@@ -84,12 +84,12 @@
       }
     ],
     "correctOption": "C",
-    "solutionText": "$\\left|\\begin{array}{cc}3 & -4 \\\\ 2 & 1\\end{array}\\right|=\\left|\\begin{array}{cc}2 x & 5 \\\\ 1 & x\\end{array}\\right|$"
+    "solutionText": "$\\left|\\begin{array}{cc}3 & -4 \\\\ 2 & 1\\end{array}\\right|=\\left|\\begin{array}{cc}2 x & 5 \\\\ 1 & x\\end{array}\\right|$ $\\Rightarrow 11=2 x^{2}-5$ $\\Rightarrow x^{2}=8$ $\\Rightarrow|x|=2 \\sqrt{2}$"
   },
   {
     "questionNumber": 4,
     "questionId": "481224",
-    "questionText": "Which of the following statements are true?",
+    "questionText": "Which of the following statements are true? A. A square matrix $A$ is said to be non-singular if $|A|=0$ B. A square matrix $A$ is invertible if and only if $A$ is non-singular matrix. C. If elements of a row are multiplied with cofactors of any other row, then their sum is zero. Choose the correct answer from the options given below",
     "options": [
       {
         "optionNumber": "A",
@@ -99,12 +99,12 @@
       {
         "optionNumber": "B",
         "optionText": "B and C only",
-        "isCorrect": false
+        "isCorrect": true
       },
       {
         "optionNumber": "C",
         "optionText": "C and D only",
-        "isCorrect": true
+        "isCorrect": false
       },
       {
         "optionNumber": "D",
@@ -113,7 +113,7 @@
       }
     ],
     "correctOption": "B",
-    "solutionText": "Statement $A$ is incorrect as for singular matrices $|A|=0$"
+    "solutionText": "Statement $A$ is incorrect as for singular matrices $|A|=0$ Statement $B$ is correct as $A$ is invertible if $|A| \\neq 0$ Statement $C$ is correct Statement $D$ is incorrect as $|A d j(A)|=|A|^{2}$"
   },
   {
     "questionNumber": 5,
@@ -128,12 +128,12 @@
       {
         "optionNumber": "B",
         "optionText": "$(-1, \\infty)$",
-        "isCorrect": true
+        "isCorrect": false
       },
       {
         "optionNumber": "C",
         "optionText": "$(-\\infty,-1) \\cup(0, \\infty)$",
-        "isCorrect": false
+        "isCorrect": true
       },
       {
         "optionNumber": "D",
@@ -142,7 +142,7 @@
       }
     ],
     "correctOption": "C",
-    "solutionText": "$\\frac{d y}{d x}=x^{2} \\cdot 2 e^{2 x}+2 x \\cdot e^{2 x}=2 x e^{2 x}(x+1)$"
+    "solutionText": "$\\frac{d y}{d x}=x^{2} \\cdot 2 e^{2 x}+2 x \\cdot e^{2 x}=2 x e^{2 x}(x+1)$ $\\frac{d y}{d x}>0$ for $x \\in(-\\infty,-1) \\cup(0, \\infty)$"
   },
   {
     "questionNumber": 6,
@@ -157,12 +157,12 @@
       {
         "optionNumber": "B",
         "optionText": "$\\frac{1}{9}$",
-        "isCorrect": false
+        "isCorrect": true
       },
       {
         "optionNumber": "C",
         "optionText": "$\\frac{2}{9}$",
-        "isCorrect": true
+        "isCorrect": false
       },
       {
         "optionNumber": "D",
